@@ -282,7 +282,9 @@ function compare(value1,value2){
 function compare(value1,value2){
 	return value1 - value2;
 }正序排列 //通常考虑返回负值的情况，因为负值就是不变化，就可以判断出到底时怎么排序的
-今天要把这一章节看完
+
+arr.concat([1,2,3])    拼接在一起，["red",1,2,3],只要是数组，就会自动拼接，不管你传入的是一个还是几个数组
+
 ```
 
 
