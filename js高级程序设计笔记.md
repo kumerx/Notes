@@ -282,7 +282,7 @@ function compare(value1,value2){
 function compare(value1,value2){
 	return value1 - value2;
 }正序排列 //通常考虑返回负值的情况，因为负值就是不变化，就可以判断出到底时怎么排序的
-
+今天要把这一章节看完
 ```
 
 
