@@ -141,6 +141,7 @@ console.log(a)
 
 //迭代器与生成器
 //1 迭代器
+/*
 class Counter{
     constructor(limit){
         this.limit=limit
@@ -177,3 +178,14 @@ for(const i of o){
         console.log(i)
     }
 }
+*/
+ //2生成器
+ /*
+ function * generator(){
+     console.log("it is:",yield*[1,2])
+ }
+ for(const i of generator())
+ {
+     console.log("value",i)
+ }
+*/
