@@ -128,6 +128,7 @@ console.log(res)
 
 //集合引用类型
 // 1 Array
+/*
 let o = {
     0:0,
     "1":2,
@@ -136,3 +137,43 @@ let o = {
 console.log(o)
 let a = Array.from(o)
 console.log(a)
+*/
+
+//迭代器与生成器
+//1 迭代器
+class Counter{
+    constructor(limit){
+        this.limit=limit
+    }
+    [Symbol.iterator](){
+        let counter = 1;
+        let limit = this.limit;
+        return {
+            next(){
+            if(counter < limit){
+                return {
+                    value:counter++,
+                    done:false
+                }
+            }else{
+                return {
+                    value:undefined,
+                    done:true
+                }
+            }
+        },
+        return(){
+            console.log("Exiting early")
+            return {done:true}
+        }
+    }
+    }
+}
+let o = new Counter(4)
+for(const i of o){
+    if(i>2){
+        break;
+    }else{
+        console.log(i)
+    }
+}
