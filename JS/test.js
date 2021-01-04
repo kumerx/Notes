@@ -189,3 +189,45 @@ for(const i of o){
      console.log("value",i)
  }
 */
+
+//Promise
+//promise执行顺序
+// let p = new Promise((resolve,reject)=>{
+//     console.log("1")
+//     resolve("2")
+//     console.log("3")
+// })
+// console.log("4")
+// p.then((e)=>console.log(e))
+// console.log("5")
+
+//p1.then()测试
+let p1 = Promise.resolve("foo")
+let p2 = p1.then();
+let p3 = p1.then(()=>{})
+let p4 = p1.then(()=>undefined)
+let p5 = p1.then(()=>"good")
+
+setTimeout(()=>console.log(p1),0)
+setTimeout(()=>console.log(p2),0)
+setTimeout(()=>console.log(p3),0)
+setTimeout(()=>console.log(p4),0)
+setTimeout(()=>console.log(p5),0)
+
+console.log(p1)
+console.log(p2)
+console.log(p3)
+console.log(p4)
+console.log(p5)
+console.log()
+
+
+// let p = Promise.resolve(3).then((e)=>console.log(e))
+// setTimeout(()=>console.log(p),0)
+// let p = new Promise((resolve,reject)=>{
+//     reject("ee")
+//     console.log("hello")
+// })
+// p.then(null,(e)=>{
+//     console.log(e)
+// })
