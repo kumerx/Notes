@@ -32,8 +32,11 @@ git commit
 文件路径下输入命令：git init
 设置签名：
 作用：辨别用户身份，和远程库的身份没有任何关系
-命令  git config  user.name xxx   user.email xxx@xxx.com//仓库级别的
-	 git config --global  系统级别的
+命令  git config  user.name xxx   user.email xxx@xxx.com//仓库级别的(用的不多)
+全局配置(更常用)：
+	 git config --global user.name ""
+	 git config --global user.email ""
+	 git config --global --list
 保存在.git/config目录下
 ```
 
