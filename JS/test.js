@@ -311,24 +311,33 @@ for(const i of o){
 // }
 // foo()
 
-async function foo(time){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log(time)
-            resolve()
-        },time)
-    })
-}
-async function f(){
-    let p0 = foo(1000)
-    let p1 = foo(3000)
-    let p2 = foo(2000)
+// async function foo(time){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log(time)
+//             resolve()
+//         },time)
+//     })
+// }
+// async function f(){
+//     let p0 = foo(1000)
+//     let p1 = foo(3000)
+//     let p2 = foo(2000)
 
-    await p0
-    console.log("p0")
-    await p1 
-    console.log("p1")
-    await p2
-    console.log("p2")
-}
-f()
+//     await p0
+//     console.log("p0")
+//     await p1 
+//     console.log("p1")
+//     await p2
+//     console.log("p2")
+// }
+// f()
+
+//模块
+//ID为'moduleA'的模块定义，moduleA依赖moduleB
+//moduleB会异步加载
+// define('moduleA',['moduleB'],function(moduleB){
+//     return {
+//         stuff:moduleB.stuff
+//     }
+// })
