@@ -341,3 +341,19 @@ for(const i of o){
 //         stuff:moduleB.stuff
 //     }
 // })
+
+//代理和反射
+let target ={
+}
+Object.defineProperty(target,'foo',{
+    configurable:false,
+    writable:false,
+    value:'bar'
+})
+let handler ={
+    get(){
+        return 'bar'
+    }
+}
+let proxy = new Proxy(target,handler)
+console.log(proxy.foo);

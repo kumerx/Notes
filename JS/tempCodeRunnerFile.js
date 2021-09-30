@@ -1,1 +1,1 @@
-await p1
+foo
